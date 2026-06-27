@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <!-- Basic Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +12,266 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./home.css">
 
-    <!-- Favicon (Optional) -->
-    <!-- <link rel="icon" type="image/png" href="../../assets/images/logo.png"> -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
 </head>
+
 <body>
 
-    <!-- Sidebar -->
+    <!-- ================= LEFT SIDEBAR ================= -->
+
     <aside>
-        <!-- Sidebar Content -->
+
+        <div class="logo">
+            <i class="fa-brands fa-x-twitter"></i>
+        </div>
+
+        <nav>
+
+            <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Explore</a>
+
+            <a href="#"><i class="fa-regular fa-bell"></i> Notifications</a>
+
+            <a href="#"><i class="fa-regular fa-envelope"></i> Messages</a>
+
+            <a href="#"><i class="fa-regular fa-bookmark"></i> Bookmarks</a>
+
+            <a href="#"><i class="fa-solid fa-users"></i> Communities</a>
+
+            <a href="#"><i class="fa-regular fa-user"></i> Profile</a>
+
+            <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+
+            <a href="#"><i class="fa-solid fa-circle-question"></i> Help</a>
+
+            <button>Post</button>
+
+        </nav>
+
     </aside>
 
-    <!-- Main Content -->
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
     <main>
-        <!-- Home Feed -->
+
+        <!-- Header -->
+
+        <header>
+
+            <h2>Home</h2>
+
+        </header>
+
+        <!-- Navigation -->
+
+        <div class="home-nav">
+
+            <span class="active">For You</span>
+
+            <span>Following</span>
+
+            <span>Exposed</span>
+
+        </div>
+
+
+        <!-- Tweet Composer -->
+
+        <div class="tweet-box">
+
+            <div class="profile">
+
+                <img src="../../assets/profile.png" alt="profile">
+
+            </div>
+
+            <div class="compose">
+
+                <textarea placeholder="What is happening?!"></textarea>
+
+                <div class="reply">
+
+                    🌍 Everyone can reply
+
+                </div>
+
+                <div class="composer-icons">
+
+                    <i class="fa-regular fa-image"></i>
+
+                    <i class="fa-solid fa-film"></i>
+
+                    <i class="fa-regular fa-face-smile"></i>
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <button>Post</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Tweet 1 -->
+
+        <article class="tweet">
+
+            <div class="avatar">R</div>
+
+            <div class="tweet-content">
+
+                <h3>Ramya <span>@ramya · 2m</span></h3>
+
+                <p>
+
+                    Building my Twitter Clone using HTML and CSS 🚀
+
+                </p>
+
+                <div class="tweet-icons">
+
+                    <i class="fa-regular fa-comment"></i>
+
+                    <i class="fa-solid fa-retweet"></i>
+
+                    <i class="fa-regular fa-heart"></i>
+
+                    <i class="fa-solid fa-chart-simple"></i>
+
+                    <i class="fa-solid fa-share"></i>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- Tweet 2 -->
+
+        <article class="tweet">
+
+            <div class="avatar">T</div>
+
+            <div class="tweet-content">
+
+                <h3>Twitter Clone <span>@twitterclone · 1h</span></h3>
+
+                <p>
+
+                    Welcome to your Home Timeline.
+
+                </p>
+
+                <div class="tweet-icons">
+
+                    <i class="fa-regular fa-comment"></i>
+
+                    <i class="fa-solid fa-retweet"></i>
+
+                    <i class="fa-regular fa-heart"></i>
+
+                    <i class="fa-solid fa-chart-simple"></i>
+
+                    <i class="fa-solid fa-share"></i>
+
+                </div>
+
+            </div>
+
+        </article>
+
     </main>
 
-    <!-- Right Sidebar -->
+
+
+    <!-- ================= RIGHT SIDEBAR ================= -->
+
     <section>
-        <!-- Search, Trends, Who to Follow -->
+
+        <!-- Search -->
+
+        <div class="search">
+
+            <input type="text" placeholder="Search">
+
+        </div>
+
+        <!-- Trends -->
+
+        <div class="trending">
+
+            <h2>Trends for you</h2>
+
+            <div class="trend">
+                <small>Trending</small>
+                <h4>#HTML</h4>
+            </div>
+
+            <div class="trend">
+                <small>Trending</small>
+                <h4>#CSS</h4>
+            </div>
+
+            <div class="trend">
+                <small>Trending in Tech</small>
+                <h4>#TwitterClone</h4>
+            </div>
+
+            <div class="trend">
+                <small>Trending</small>
+                <h4>#WebDevelopment</h4>
+            </div>
+
+        </div>
+
+
+        <!-- Follow -->
+
+        <div class="follow">
+
+            <h2>Who to Follow</h2>
+
+            <div class="person">
+
+                <span>OpenAI</span>
+
+                <button>Follow</button>
+
+            </div>
+
+            <div class="person">
+
+                <span>GitHub</span>
+
+                <button>Follow</button>
+
+            </div>
+
+            <div class="person">
+
+                <span>Microsoft</span>
+
+                <button>Follow</button>
+
+            </div>
+
+        </div>
+
     </section>
 
 </body>
+
 </html>
