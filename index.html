@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- Basic Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Home</title>
 
-    <!-- Title -->
-    <title>Twitter Clone</title>
+    <link rel="stylesheet" href="./pages/Profile/Profile.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./home.css">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-
 <body>
 
-    <!-- ================= LEFT SIDEBAR ================= -->
+<div class="container">
 
-    <aside>
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
 
         <div class="logo">
             <i class="fa-brands fa-x-twitter"></i>
@@ -30,248 +25,158 @@
 
         <nav>
 
-            <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="/" class="active">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
 
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Explore</a>
+            <a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Explore</span>
+            </a>
 
-            <a href="#"><i class="fa-regular fa-bell"></i> Notifications</a>
+            <a href="#">
+                <i class="fa-regular fa-bell"></i>
+                <span>Notifications</span>
+            </a>
 
-            <a href="#"><i class="fa-regular fa-envelope"></i> Messages</a>
+            <a href="./pages/messages/messages.html">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Messages</span>
+            </a>
 
-            <a href="#"><i class="fa-regular fa-bookmark"></i> Bookmarks</a>
+            <a href="#">
+                <i class="fa-solid fa-brain"></i>
+                <span>Grok</span>
+            </a>
 
-            <a href="#"><i class="fa-solid fa-users"></i> Communities</a>
+            <a href="#">
+                <i class="fa-solid fa-user-group"></i>
+                <span>Communities</span>
+            </a>
 
-            <a href="#"><i class="fa-regular fa-user"></i> Profile</a>
+            <a href="#">
+                <i class="fa-solid fa-crown"></i>
+                <span>Premium</span>
+            </a>
 
-            <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            <a href="./pages/profile/profile.html">
+                <i class="fa-regular fa-user"></i>
+                <span>Profile</span>
+            </a>
 
-            <a href="#"><i class="fa-solid fa-circle-question"></i> Help</a>
-
-            <button>Post</button>
+            <a href="#">
+                <i class="fa-solid fa-ellipsis"></i>
+                <span>More</span>
+            </a>
 
         </nav>
 
+        <button class="post-btn">Post</button>
+
     </aside>
 
+    <!-- Feed -->
 
+    <main class="feed">
 
-    <!-- ================= MAIN CONTENT ================= -->
-
-    <main>
-
-        <!-- Header -->
-
-        <header>
-
+        <div class="feed-header">
             <h2>Home</h2>
+        </div>
 
-        </header>
+        <div class="compose">
 
-        <!-- Navigation -->
+            <img src="./assets/images/profile.jpeg">
 
-        <div class="home-nav">
-
-            <span class="active">For You</span>
-
-            <span>Following</span>
-
-            <span>Exposed</span>
+            <input
+            type="text"
+            placeholder="What's happening?">
 
         </div>
 
+        <div class="tweet">
 
-        <!-- Tweet Composer -->
+            <img src="./assets/images/profile.jpeg">
 
-        <div class="tweet-box">
+            <div>
 
-            <div class="profile">
+                <h3>
+                    Elon Musk
+                    <span>@elonmusk · 2m</span>
+                </h3>
 
-                <img src="../../assets/profile.png" alt="profile">
+                <p>
+                    Welcome to the HTML & CSS Twitter clone.
+                </p>
 
-            </div>
-
-            <div class="compose">
-
-                <textarea placeholder="What is happening?!"></textarea>
-
-                <div class="reply">
-
-                    🌍 Everyone can reply
-
-                </div>
-
-                <div class="composer-icons">
-
-                    <i class="fa-regular fa-image"></i>
-
-                    <i class="fa-solid fa-film"></i>
-
-                    <i class="fa-regular fa-face-smile"></i>
-
-                    <i class="fa-solid fa-calendar-days"></i>
-
-                    <i class="fa-solid fa-location-dot"></i>
-
-                    <button>Post</button>
-
+                <div class="tweet-icons">
+                    <i class="fa-regular fa-comment"></i>
+                    <i class="fa-solid fa-retweet"></i>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-chart-simple"></i>
                 </div>
 
             </div>
 
         </div>
 
+        <div class="tweet">
 
+            <img src="./assets/images/profile.jpeg">
 
-        <!-- Tweet 1 -->
+            <div>
 
-        <article class="tweet">
-
-            <div class="avatar">R</div>
-
-            <div class="tweet-content">
-
-                <h3>Ramya <span>@ramya · 2m</span></h3>
+                <h3>
+                    OpenAI
+                    <span>@OpenAI · 1h</span>
+                </h3>
 
                 <p>
-
-                    Building my Twitter Clone using HTML and CSS 🚀
-
+                    Building beautiful interfaces without JavaScript.
                 </p>
 
                 <div class="tweet-icons">
-
                     <i class="fa-regular fa-comment"></i>
-
                     <i class="fa-solid fa-retweet"></i>
-
                     <i class="fa-regular fa-heart"></i>
-
                     <i class="fa-solid fa-chart-simple"></i>
-
-                    <i class="fa-solid fa-share"></i>
-
                 </div>
 
             </div>
 
-        </article>
-
-
-
-        <!-- Tweet 2 -->
-
-        <article class="tweet">
-
-            <div class="avatar">T</div>
-
-            <div class="tweet-content">
-
-                <h3>Twitter Clone <span>@twitterclone · 1h</span></h3>
-
-                <p>
-
-                    Welcome to your Home Timeline.
-
-                </p>
-
-                <div class="tweet-icons">
-
-                    <i class="fa-regular fa-comment"></i>
-
-                    <i class="fa-solid fa-retweet"></i>
-
-                    <i class="fa-regular fa-heart"></i>
-
-                    <i class="fa-solid fa-chart-simple"></i>
-
-                    <i class="fa-solid fa-share"></i>
-
-                </div>
-
-            </div>
-
-        </article>
+        </div>
 
     </main>
 
+    <!-- Right Sidebar -->
 
+    <aside class="right">
 
-    <!-- ================= RIGHT SIDEBAR ================= -->
+        <input type="text" placeholder="Search">
 
-    <section>
+        <div class="card">
 
-        <!-- Search -->
+            <h3>Trends for you</h3>
 
-        <div class="search">
-
-            <input type="text" placeholder="Search">
-
-        </div>
-
-        <!-- Trends -->
-
-        <div class="trending">
-
-            <h2>Trends for you</h2>
-
-            <div class="trend">
-                <small>Trending</small>
-                <h4>#HTML</h4>
-            </div>
-
-            <div class="trend">
-                <small>Trending</small>
-                <h4>#CSS</h4>
-            </div>
-
-            <div class="trend">
-                <small>Trending in Tech</small>
-                <h4>#TwitterClone</h4>
-            </div>
-
-            <div class="trend">
-                <small>Trending</small>
-                <h4>#WebDevelopment</h4>
-            </div>
+            <p>#HTML</p>
+            <p>#CSS</p>
+            <p>#WebDevelopment</p>
 
         </div>
 
+        <div class="card">
 
-        <!-- Follow -->
+            <h3>Who to follow</h3>
 
-        <div class="follow">
-
-            <h2>Who to Follow</h2>
-
-            <div class="person">
-
-                <span>OpenAI</span>
-
-                <button>Follow</button>
-
-            </div>
-
-            <div class="person">
-
-                <span>GitHub</span>
-
-                <button>Follow</button>
-
-            </div>
-
-            <div class="person">
-
-                <span>Microsoft</span>
-
-                <button>Follow</button>
-
-            </div>
+            <p>OpenAI</p>
+            <p>Google</p>
+            <p>Microsoft</p>
 
         </div>
 
-    </section>
+    </aside>
+
+</div>
 
 </body>
-
 </html>
