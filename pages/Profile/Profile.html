@@ -3,254 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Twitter Profile</title>
+
+    <link rel="stylesheet" href="Profile.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 
-<div class="settings-page">
+<div class="container">
 
-    <!-- Header -->
-    <div class="header">
+    <!-- LEFT SIDEBAR -->
 
-        <div class="back">
-            <i class="fa-solid fa-arrow-left"></i>
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-brands fa-x-twitter"></i>
         </div>
 
-        <div class="title">
-            <h2>Settings</h2>
-        </div>
-
-    </div>
-
-    <!-- Search -->
-
-    <div class="search-box">
-
-        <i class="fa-solid fa-magnifying-glass"></i>
-
-        <input type="text" placeholder="Search settings">
-
-    </div>
-
-
-    <!-- Menu -->
-
-    <div class="menu">
-
-        <div class="item">
-
-            <div class="left">
-
-                <i class="fa-regular fa-user"></i>
-
-                <div>
-
-                    <h3>Your account</h3>
-
-                    <p>
-                        See information about your account,
-                        download your archive and manage
-                        account settings.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <i class="fa-solid fa-chevron-right"></i>
-
-        </div>
-
-
-        <div class="item">
-
-            <div class="left">
-
-                <i class="fa-solid fa-lock"></i>
-
-                <div>
-
-                    <h3>Security and account access</h3>
-
-                    <p>
-                        Manage your password,
-                        security and connected apps.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <i class="fa-solid fa-chevron-right"></i>
-
-        </div>
-
-
-        <div class="item">
-
-            <div class="left">
-
-                <i class="fa-regular fa-gem"></i>
-
-                <div>
-
-                    <h3>Premium</h3>
-
-                    <p>
-                        Manage your Premium subscription
-                        and exclusive features.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <i class="fa-solid fa-chevron-right"></i>
-
-        </div>
-
-
-        <div class="item">
-
-            <div class="left">
-
-                <i class="fa-regular fa-calendar"></i>
-
-                <div>
-
-                    <h3>Timeline</h3>
-
-                    <p>
-                        Configure your timeline
-                        appearance and interactions.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <i class="fa-solid fa-chevron-right"></i>
-
-        </div>
-
-
-        <div class="item">
-
-            <div class="left">
-
-                <i class="fa-solid fa-shield"></i>
-
-                <div>
-
-                    <h3>Privacy and Safety</h3>
-
-                    <p>
-                        Manage what information
-                        you see and share.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <i class="fa-solid fa-chevron-right"></i>
-
-        </div>
-
-
-        <div class="item">
-
-            <div class="left">
-
+        <nav>
+
+            <a href="../../index.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Explore</span>
+            </a>
+
+            <a href="#">
                 <i class="fa-regular fa-bell"></i>
+                <span>Notifications</span>
+            </a>
 
-                <div>
+            <a href="../messages/messages.html">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Messages</span>
+            </a>
 
-                    <h3>Notifications</h3>
+            <a href="#">
+                <i class="fa-solid fa-brain"></i>
+                <span>Grok</span>
+            </a>
 
-                    <p>
-                        Choose what notifications
-                        you receive.
-                    </p>
+            <a href="#">
+                <i class="fa-solid fa-user-group"></i>
+                <span>Communities</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-crown"></i>
+                <span>Premium</span>
+            </a>
+
+            <a href="../Profile/Profile.html" class="active">
+                <i class="fa-regular fa-user"></i>
+                <span>Profile</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-ellipsis"></i>
+                <span>More</span>
+            </a>
+
+        </nav>
+
+        <button class="post-btn">
+            Post
+        </button>
+
+    </aside>
+
+    <!-- PROFILE -->
+
+    <main class="profile">
+
+        <header class="profile-header">
+
+            <div class="cover"></div>
+
+            <div class="profile-info">
+
+                <img src="../../assets/images/profile.jpeg"
+                class="profile-pic">
+
+                <button class="edit-btn">
+                    Edit profile
+                </button>
+
+                <h2>John Doe</h2>
+
+                <p class="username">@johndoe</p>
+
+                <p class="bio">
+                    Frontend Developer • HTML • CSS • JavaScript
+                </p>
+
+                <div class="details">
+
+                    <span>
+                        <i class="fa-regular fa-calendar"></i>
+                        Joined January 2025
+                    </span>
+
+                </div>
+
+                <div class="follow">
+
+                    <span><b>210</b> Following</span>
+
+                    <span><b>1.5K</b> Followers</span>
 
                 </div>
 
             </div>
 
-            <i class="fa-solid fa-chevron-right"></i>
+        </header>
+
+        <!-- Tabs -->
+
+        <div class="tabs">
+
+            <span class="selected">Posts</span>
+            <span>Replies</span>
+            <span>Media</span>
+            <span>Likes</span>
 
         </div>
 
+        <!-- Tweets -->
 
-        <div class="item">
+        <section class="tweet">
 
-            <div class="left">
+            <img src="../../assets/images/profile.jpeg">
 
-                <i class="fa-solid fa-globe"></i>
+            <div>
 
-                <div>
+                <h3>
+                    John Doe
+                    <span>@johndoe · 2h</span>
+                </h3>
 
-                    <h3>Accessibility</h3>
+                <p>
+                    Building a Twitter clone using only HTML and CSS.
+                </p>
 
-                    <p>
-                        Display, language,
-                        keyboard shortcuts and more.
-                    </p>
+                <div class="tweet-icons">
+
+                    <i class="fa-regular fa-comment"></i>
+
+                    <i class="fa-solid fa-retweet"></i>
+
+                    <i class="fa-regular fa-heart"></i>
+
+                    <i class="fa-solid fa-chart-simple"></i>
 
                 </div>
 
             </div>
 
-            <i class="fa-solid fa-chevron-right"></i>
+        </section>
 
-        </div>
+        <section class="tweet">
 
+            <img src="../../assets/images/profile.jpeg">
 
-        <div class="item">
+            <div>
 
-            <div class="left">
+                <h3>
+                    John Doe
+                    <span>@johndoe · Yesterday</span>
+                </h3>
 
-                <i class="fa-solid fa-circle-info"></i>
+                <p>
+                    CSS Grid + Flexbox makes layouts so much easier.
+                </p>
 
-                <div>
+                <div class="tweet-icons">
 
-                    <h3>About</h3>
+                    <i class="fa-regular fa-comment"></i>
 
-                    <p>
-                        Terms of Service,
-                        Privacy Policy and licenses.
-                    </p>
+                    <i class="fa-solid fa-retweet"></i>
+
+                    <i class="fa-regular fa-heart"></i>
+
+                    <i class="fa-solid fa-chart-simple"></i>
 
                 </div>
 
             </div>
 
-            <i class="fa-solid fa-chevron-right"></i>
+        </section>
+
+    </main>
+
+    <!-- RIGHT SIDEBAR -->
+
+    <aside class="right">
+
+        <input
+        type="text"
+        placeholder="Search">
+
+        <div class="card">
+
+            <h3>Subscribe to Premium</h3>
+
+            <p>
+                Subscribe to unlock new features.
+            </p>
+
+            <button>Subscribe</button>
 
         </div>
 
-    </div>
+        <div class="card">
 
-    <!-- Bottom Navigation -->
+            <h3>Who to follow</h3>
 
-    <div class="bottom-nav">
+            <p>@OpenAI</p>
 
-        <i class="fa-solid fa-house"></i>
+            <p>@Google</p>
 
-        <i class="fa-solid fa-magnifying-glass"></i>
+            <p>@Microsoft</p>
 
-        <i class="fa-solid fa-users"></i>
+        </div>
 
-        <i class="fa-regular fa-bell"></i>
-
-        <i class="fa-regular fa-envelope"></i>
-
-    </div>
+    </aside>
 
 </div>
 
