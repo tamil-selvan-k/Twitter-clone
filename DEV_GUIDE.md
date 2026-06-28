@@ -12,7 +12,7 @@ twitter-clone/
 │
 ├── pages/
 │   ├── home/
-│   │   ├── index.html
+│   │   ├── home.html
 │   │   └── home.css
 │   │
 │   ├── profile/
