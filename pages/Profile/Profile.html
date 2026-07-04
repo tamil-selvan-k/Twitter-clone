@@ -3,256 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
-    <link rel="stylesheet" href="style.css">
+    <title>X Profile</title>
+
+    <link rel="stylesheet" href="profile.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
-<div class="settings-page">
+<div class="profile">
 
     <!-- Header -->
-    <div class="header">
+    <header class="header">
 
-        <div class="back">
+        <div class="back" id="backBtn">
             <i class="fa-solid fa-arrow-left"></i>
         </div>
 
-        <div class="title">
-            <h2>Settings</h2>
+        <div>
+            <h2>Ramya <i class="fa-solid fa-circle-check verified"></i></h2>
+            <span>150 Posts</span>
         </div>
 
-    </div>
+    </header>
 
-    <!-- Search -->
+    <!-- Cover -->
+    <section class="cover">
 
-    <div class="search-box">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200"
+             alt="Cover Image">
 
-        <i class="fa-solid fa-magnifying-glass"></i>
+    </section>
 
-        <input type="text" placeholder="Search settings">
+    <!-- Profile Information -->
 
-    </div>
+    <section class="profile-info">
 
+        <img class="profile-pic"
+        src="https://i.pravatar.cc/200?img=32"
+        alt="Profile">
 
-    <!-- Menu -->
+        <button id="editBtn">Edit Profile</button>
 
-    <div class="menu">
+        <h2>
+            Ramya
+            <i class="fa-solid fa-circle-check verified"></i>
+        </h2>
 
-        <div class="item">
+        <h4>@ramya_dev</h4>
 
-            <div class="left">
+        <p class="bio">
+            💻 Full Stack Developer |
+            Java • Spring Boot • HTML • CSS • JavaScript
+        </p>
 
-                <i class="fa-regular fa-user"></i>
+        <div class="details">
 
-                <div>
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                India
+            </span>
 
-                    <h3>Your account</h3>
+            <span>
+                <i class="fa-solid fa-link"></i>
+                www.ramya.dev
+            </span>
 
-                    <p>
-                        See information about your account,
-                        download your archive and manage
-                        account settings.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <i class="fa-solid fa-chevron-right"></i>
-
-        </div>
-
-
-        <div class="item">
-
-            <div class="left">
-
-                <i class="fa-solid fa-lock"></i>
-
-                <div>
-
-                    <h3>Security and account access</h3>
-
-                    <p>
-                        Manage your password,
-                        security and connected apps.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <i class="fa-solid fa-chevron-right"></i>
-
-        </div>
-
-
-        <div class="item">
-
-            <div class="left">
-
-                <i class="fa-regular fa-gem"></i>
-
-                <div>
-
-                    <h3>Premium</h3>
-
-                    <p>
-                        Manage your Premium subscription
-                        and exclusive features.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <i class="fa-solid fa-chevron-right"></i>
-
-        </div>
-
-
-        <div class="item">
-
-            <div class="left">
-
+            <span>
                 <i class="fa-regular fa-calendar"></i>
+                Joined July 2026
+            </span>
+
+        </div>
+
+        <div class="follow">
+
+            <span>
+                <strong>320</strong> Following
+            </span>
+
+            <span>
+                <strong>2,450</strong> Followers
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- Tabs -->
+
+    <section class="tabs">
+
+        <div class="tab active" data-tab="posts">
+            Posts
+        </div>
+
+        <div class="tab" data-tab="replies">
+            Replies
+        </div>
+
+        <div class="tab" data-tab="media">
+            Media
+        </div>
+
+        <div class="tab" data-tab="likes">
+            Likes
+        </div>
+
+    </section>
+
+    <!-- Tweets -->
+
+    <section id="posts" class="tab-content">
+
+        <!-- Tweet 1 -->
+
+        <div class="tweet">
+
+            <div class="tweet-user">
+
+                <img src="https://i.pravatar.cc/100?img=32">
 
                 <div>
 
-                    <h3>Timeline</h3>
+                    <h3>
+                        Ramya
+                        <i class="fa-solid fa-circle-check verified"></i>
+
+                        <span>@ramya_dev · 2h</span>
+                    </h3>
 
                     <p>
-                        Configure your timeline
-                        appearance and interactions.
+                        Learning Spring Boot and building amazing web
+                        applications every day 🚀
                     </p>
+
+                    <div class="actions">
+
+                        <span class="comment">
+                            <i class="fa-regular fa-comment"></i> 18
+                        </span>
+
+                        <span class="retweet">
+                            <i class="fa-solid fa-retweet"></i> 12
+                        </span>
+
+                        <span class="like">
+                            <i class="fa-regular fa-heart"></i>
+                            <span class="like-count">120</span>
+                        </span>
+
+                        <span class="bookmark">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-share"></i>
+                        </span>
+
+                    </div>
 
                 </div>
 
             </div>
 
-            <i class="fa-solid fa-chevron-right"></i>
-
         </div>
 
+        <!-- Tweet 2 -->
 
-        <div class="item">
+        <div class="tweet">
 
-            <div class="left">
+            <div class="tweet-user">
 
-                <i class="fa-solid fa-shield"></i>
+                <img src="https://i.pravatar.cc/100?img=32">
 
                 <div>
 
-                    <h3>Privacy and Safety</h3>
+                    <h3>
+                        Ramya
+                        <i class="fa-solid fa-circle-check verified"></i>
+
+                        <span>@ramya_dev · Yesterday</span>
+                    </h3>
 
                     <p>
-                        Manage what information
-                        you see and share.
+                        Java + Spring Boot + MySQL is one of my favorite
+                        stacks for backend development.
                     </p>
 
+                    <div class="actions">
+
+                        <span class="comment">
+                            <i class="fa-regular fa-comment"></i> 8
+                        </span>
+
+                        <span class="retweet">
+                            <i class="fa-solid fa-retweet"></i> 4
+                        </span>
+                        <span class="like">
+                            <i class="fa-regular fa-heart"></i>
+                            <span class="like-count">89</span>
+                        </span>
+                        <span class="bookmark">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </span>
+                        <span
+                            <i class="fa-solid fa-share"></i>
+                        </span>
+                    </div>
                 </div>
-
             </div>
-
-            <i class="fa-solid fa-chevron-right"></i>
-
         </div>
-
-
-        <div class="item">
-
-            <div class="left">
-
-                <i class="fa-regular fa-bell"></i>
-
-                <div>
-
-                    <h3>Notifications</h3>
-
-                    <p>
-                        Choose what notifications
-                        you receive.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <i class="fa-solid fa-chevron-right"></i>
-
+    </section>
+    <!-- Replies -->
+    <section id="replies" class="tab-content" style="display:none;">
+        <div class="tweet">
+            <p>No replies available.</p>
         </div>
-
-
-        <div class="item">
-
-            <div class="left">
-
-                <i class="fa-solid fa-globe"></i>
-
-                <div>
-
-                    <h3>Accessibility</h3>
-
-                    <p>
-                        Display, language,
-                        keyboard shortcuts and more.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <i class="fa-solid fa-chevron-right"></i>
-
+    </section>
+    <!-- Media -->
+    <section id="media" class="tab-content" style="display:none;">
+        <div class="tweet">
+            <p>No media uploaded.</p>
         </div>
-
-
-        <div class="item">
-
-            <div class="left">
-
-                <i class="fa-solid fa-circle-info"></i>
-
-                <div>
-
-                    <h3>About</h3>
-
-                    <p>
-                        Terms of Service,
-                        Privacy Policy and licenses.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <i class="fa-solid fa-chevron-right"></i>
-
+    </section>
+    <!-- Likes -->
+    <section id="likes" class="tab-content" style="display:none;">
+        <div class="tweet">
+            <p>No liked posts yet.</p>
         </div>
-
-    </div>
-
-    <!-- Bottom Navigation -->
-
-    <div class="bottom-nav">
-
-        <i class="fa-solid fa-house"></i>
-
-        <i class="fa-solid fa-magnifying-glass"></i>
-
-        <i class="fa-solid fa-users"></i>
-
-        <i class="fa-regular fa-bell"></i>
-
-        <i class="fa-regular fa-envelope"></i>
-
-    </div>
-
+    </section>
 </div>
-
+<script src="profile.js"></script>
 </body>
 </html>
