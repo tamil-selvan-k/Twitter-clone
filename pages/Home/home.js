@@ -1,89 +1,134 @@
-const postInput = document.querySelector(".post-box input");
-const postButton = document.querySelector(".tweet-btn");
-const postsContainer = document.querySelector(".posts");
+const postBtn = document.getElementById("postBtn");
+const postInput = document.getElementById("postInput");
+const postsContainer = document.getElementById("posts");
 
-let posts = [
-    {
-        user: "OpenAI",
-        content: "Welcome to X (Twitter Clone)!",
-        likes: 0
-    },
-    {
-        user: "Google",
-        content: "Start posting your thoughts!",
-        likes: 0
+let posts = [];
+
+window.onload = () => {
+    loadPosts();
+};
+
+function loadPosts() {
+
+    const savedPosts = localStorage.getItem("posts");
+
+    if(savedPosts){
+
+        posts = JSON.parse(savedPosts);
+
+    }else{
+
+        posts = [
+            {
+                user:"OpenAI",
+                text:"Welcome to the Twitter Clone!",
+                likes:0
+            },
+            {
+                user:"Google",
+                text:"Have a productive day!",
+                likes:0
+            }
+        ];
+
+        savePosts();
     }
-];
 
-// Display Posts
-function displayPosts() {
-    postsContainer.innerHTML = "";
+    displayPosts();
 
-    posts.forEach((post, index) => {
-        const postElement = document.createElement("div");
-        postElement.classList.add("post");
-
-        postElement.innerHTML = `
-            <h4>${post.user}</h4>
-            <p>${post.content}</p>
-
-            <div class="post-actions">
-                <button onclick="likePost(${index})">
-                    ❤️ ${post.likes}
-                </button>
-
-                <button onclick="deletePost(${index})">
-                    🗑 Delete
-                </button>
-            </div>
-        `;
-
-        postsContainer.appendChild(postElement);
-    });
 }
 
-// Create Post
-function createPost() {
+function savePosts(){
 
-    const text = postInput.value.trim();
+    localStorage.setItem("posts",JSON.stringify(posts));
 
-    if (text === "") {
-        alert("Please write something!");
+}
+
+function displayPosts(){
+
+    postsContainer.innerHTML="";
+
+    posts.slice().reverse().forEach((post,index)=>{
+
+        const div=document.createElement("div");
+
+        div.className="post";
+
+        div.innerHTML=`
+
+        <div class="post-header">
+            <h4>${post.user}</h4>
+        </div>
+
+        <div class="post-body">
+            ${post.text}
+        </div>
+
+        <div class="post-footer">
+
+            <button onclick="likePost(${posts.length-1-index})">
+            ❤️ ${post.likes}
+            </button>
+
+            <button onclick="deletePost(${posts.length-1-index})">
+            🗑 Delete
+            </button>
+
+        </div>
+
+        `;
+
+        postsContainer.appendChild(div);
+
+    });
+
+}
+
+postBtn.addEventListener("click",()=>{
+
+    const text=postInput.value.trim();
+
+    if(text===""){
+
+        alert("Write something first!");
+
         return;
     }
 
-    posts.unshift({
-        user: "You",
-        content: text,
-        likes: 0
-    });
+    const newPost={
 
-    postInput.value = "";
+        user:"You",
+        text:text,
+        likes:0
+
+    };
+
+    posts.push(newPost);
+
+    savePosts();
 
     displayPosts();
-}
 
-// Like Post
-function likePost(index) {
-    posts[index].likes++;
-    displayPosts();
-}
+    postInput.value="";
 
-// Delete Post
-function deletePost(index) {
-    posts.splice(index, 1);
-    displayPosts();
-}
-
-// Post Button
-postButton.addEventListener("click", createPost);
-
-// Enter Key
-postInput.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-        createPost();
-    }
 });
 
-// Initial Load
-displayPosts();
+function likePost(index){
+
+    posts[index].likes++;
+
+    savePosts();
+
+    displayPosts();
+
+}
+
+function deletePost(index){
+
+    posts.splice(index,1);
+
+    savePosts();
+
+    displayPosts();
+
+}
