@@ -40,7 +40,6 @@ function renderTweets() {
             </div>
 
             <div class="tweet-content">
-
                 <h3>
                     ${tweet.username}
                     <span>${tweet.handle} · ${tweet.time}</span>
