@@ -2,25 +2,19 @@
 <html lang="en">
 <head>
 
-    <!-- Basic Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Title -->
     <title>Twitter Clone</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="./home.css">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
 </head>
 
 <body>
-
-    <!-- ================= LEFT SIDEBAR ================= -->
 
     <aside>
 
@@ -54,21 +48,11 @@
 
     </aside>
 
-
-
-    <!-- ================= MAIN CONTENT ================= -->
-
     <main>
 
-        <!-- Header -->
-
         <header>
-
             <h2>Home</h2>
-
         </header>
-
-        <!-- Navigation -->
 
         <div class="home-nav">
 
@@ -80,9 +64,6 @@
 
         </div>
 
-
-        <!-- Tweet Composer -->
-
         <div class="tweet-box">
 
             <div class="profile">
@@ -93,12 +74,10 @@
 
             <div class="compose">
 
-                <textarea placeholder="What is happening?!"></textarea>
+                <textarea id="tweetInput" placeholder="What is happening?!"></textarea>
 
                 <div class="reply">
-
                     🌍 Everyone can reply
-
                 </div>
 
                 <div class="composer-icons">
@@ -113,7 +92,7 @@
 
                     <i class="fa-solid fa-location-dot"></i>
 
-                    <button>Post</button>
+                    <button id="postBtn">Post</button>
 
                 </div>
 
@@ -121,9 +100,10 @@
 
         </div>
 
+        <!-- Dynamic Tweets -->
+        <div id="tweetsContainer"></div>
 
-
-        <!-- Tweet 1 -->
+        <!-- Existing Tweet 1 -->
 
         <article class="tweet">
 
@@ -134,9 +114,7 @@
                 <h3>Ramya <span>@ramya · 2m</span></h3>
 
                 <p>
-
                     Building my Twitter Clone using HTML and CSS 🚀
-
                 </p>
 
                 <div class="tweet-icons">
@@ -157,9 +135,7 @@
 
         </article>
 
-
-
-        <!-- Tweet 2 -->
+        <!-- Existing Tweet 2 -->
 
         <article class="tweet">
 
@@ -170,9 +146,7 @@
                 <h3>Twitter Clone <span>@twitterclone · 1h</span></h3>
 
                 <p>
-
                     Welcome to your Home Timeline.
-
                 </p>
 
                 <div class="tweet-icons">
@@ -195,21 +169,11 @@
 
     </main>
 
-
-
-    <!-- ================= RIGHT SIDEBAR ================= -->
-
     <section>
 
-        <!-- Search -->
-
         <div class="search">
-
             <input type="text" placeholder="Search">
-
         </div>
-
-        <!-- Trends -->
 
         <div class="trending">
 
@@ -237,41 +201,30 @@
 
         </div>
 
-
-        <!-- Follow -->
-
         <div class="follow">
 
             <h2>Who to Follow</h2>
 
             <div class="person">
-
                 <span>OpenAI</span>
-
                 <button>Follow</button>
-
             </div>
 
             <div class="person">
-
                 <span>GitHub</span>
-
                 <button>Follow</button>
-
             </div>
 
             <div class="person">
-
                 <span>Microsoft</span>
-
                 <button>Follow</button>
-
             </div>
 
         </div>
 
     </section>
 
-</body>
+    <script src="./home.js"></script>
 
+</body>
 </html>
