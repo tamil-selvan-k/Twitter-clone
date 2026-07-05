@@ -240,21 +240,48 @@
 
         <div class="message-box">
 
-            <button>
-                <i class="fa-regular fa-face-smile"></i>
-            </button>
+    <div class="emoji-wrapper">
 
-            <input
-                type="text"
-                placeholder="Start a new message">
+        <button class="emoji-btn" type="button">
+            <i class="fa-regular fa-face-smile"></i>
+        </button>
 
-            <button class="send-btn">
+        <div class="emoji-picker">
 
-                <i class="fa-solid fa-paper-plane"></i>
-
-            </button>
+            <span>😀</span>
+            <span>😁</span>
+            <span>😂</span>
+            <span>🤣</span>
+            <span>😊</span>
+            <span>😍</span>
+            <span>😘</span>
+            <span>😎</span>
+            <span>🥰</span>
+            <span>😭</span>
+            <span>😢</span>
+            <span>😡</span>
+            <span>👍</span>
+            <span>👏</span>
+            <span>🙏</span>
+            <span>❤️</span>
+            <span>🔥</span>
+            <span>🎉</span>
+            <span>🤝</span>
+            <span>👌</span>
 
         </div>
+
+    </div>
+
+    <input
+        type="text"
+        placeholder="Start a new message">
+
+    <button class="send-btn">
+        <i class="fa-solid fa-paper-plane"></i>
+    </button>
+
+</div>
 
     </section>
 
@@ -400,6 +427,47 @@ messageInput.addEventListener("keypress",function(e){
     if(e.key==="Enter"){
         sendMessage();
     }
+
+});
+const emojiBtn = document.querySelector(".emoji-btn");
+const emojiPicker = document.querySelector(".emoji-picker");
+const emojis = document.querySelectorAll(".emoji-picker span");
+
+// Emoji Picker Open / Close
+
+emojiBtn.addEventListener("click", function (e) {
+
+    e.stopPropagation();
+
+    emojiPicker.classList.toggle("show");
+
+});
+
+// Emoji Select
+
+emojis.forEach(function (emoji) {
+
+    emoji.addEventListener("click", function () {
+
+        messageInput.value += emoji.textContent;
+
+        messageInput.focus();
+
+    });
+
+});
+
+// Outside Click = Close Picker
+
+document.addEventListener("click", function () {
+
+    emojiPicker.classList.remove("show");
+
+});
+
+emojiPicker.addEventListener("click", function (e) {
+
+    e.stopPropagation();
 
 });
 

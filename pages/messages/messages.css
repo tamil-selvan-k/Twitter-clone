@@ -528,3 +528,43 @@ body{
     }
 
 }
+/* ==========================
+   EMOJI PICKER
+========================== */
+
+.emoji-wrapper{
+    position: relative;
+}
+
+.emoji-picker{
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 230px;
+    background: #16181c;
+    border: 1px solid #2f3336;
+    border-radius: 12px;
+    padding: 10px;
+    display: none;
+    flex-wrap: wrap;
+    gap: 8px;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.emoji-picker.show{
+    display: flex;
+}
+
+.emoji-picker span{
+    font-size: 22px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.emoji-picker span:hover{
+    background: #2f3336;
+    transform: scale(1.2);
+}
