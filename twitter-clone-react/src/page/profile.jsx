@@ -1,59 +1,115 @@
+import { useState } from "react";
+import Sidebar from "../components/Sidebar";
 import "./Profile.css";
+import profileImg from "../assets/profile.jpeg";
+
+const profileTweets = [
+  {
+    id: 1,
+    name: "John Doe",
+    handle: "@johndoe · 2h",
+    text: "Building a Twitter clone using only HTML and CSS.",
+  },
+  {
+    id: 2,
+    name: "John Doe",
+    handle: "@johndoe · Yesterday",
+    text: "CSS Grid + Flexbox makes layouts so much easier.",
+  },
+];
 
 function Profile() {
+  const [activeTab, setActiveTab] = useState("Posts");
+  const tabs = ["Posts", "Replies", "Media", "Likes"];
+
   return (
     <div className="profile-container">
-      {/* Cover Photo */}
-      <div className="cover-photo"></div>
+      {/* Left Sidebar */}
+      <Sidebar />
 
-      {/* Profile Section */}
-      <div className="profile-info">
-        <img
-          src="https://via.placeholder.com/120"
-          alt="Profile"
-          className="profile-image"
-        />
+      {/* Profile Main */}
+      <main className="profile">
+        <header className="profile-header">
+          <div className="cover"></div>
 
-        <button className="edit-btn">Edit Profile</button>
+          <div className="profile-info">
+            <img
+              src={profileImg}
+              alt="John Doe"
+              className="profile-pic"
+            />
 
-        <h2>John Doe</h2>
-        <p className="username">@johndoe</p>
+            <button className="edit-btn">Edit profile</button>
 
-        <p className="bio">
-          Web Developer | React Enthusiast | Learning every day 🚀
-        </p>
+            <h2>John Doe</h2>
+            <p className="username">@johndoe</p>
+            <p className="bio">
+              Frontend Developer &bull; HTML &bull; CSS &bull; JavaScript
+            </p>
 
-        <div className="details">
-          <span>📍 India</span>
-          <span>📅 Joined July 2026</span>
+            <div className="details">
+              <span>
+                <i className="fa-regular fa-calendar"></i> Joined January 2025
+              </span>
+            </div>
+
+            <div className="follow">
+              <span><b>210</b> Following</span>
+              <span><b>1.5K</b> Followers</span>
+            </div>
+          </div>
+        </header>
+
+        {/* Tabs */}
+        <div className="tabs">
+          {tabs.map((tab) => (
+            <span
+              key={tab}
+              className={activeTab === tab ? "selected" : ""}
+              onClick={() => setActiveTab(tab)}
+            >
+              {tab}
+            </span>
+          ))}
         </div>
 
-        <div className="follow-info">
-          <span><strong>120</strong> Following</span>
-          <span><strong>1.5K</strong> Followers</span>
+        {/* Tweets */}
+        {profileTweets.map((tweet) => (
+          <div className="tweet" key={tweet.id}>
+            <img src={profileImg} alt={tweet.name} />
+            <div>
+              <h3>
+                {tweet.name} <span>{tweet.handle}</span>
+              </h3>
+              <p>{tweet.text}</p>
+              <div className="tweet-icons">
+                <i className="fa-regular fa-comment"></i>
+                <i className="fa-solid fa-retweet"></i>
+                <i className="fa-regular fa-heart"></i>
+                <i className="fa-solid fa-chart-simple"></i>
+              </div>
+            </div>
+          </div>
+        ))}
+      </main>
+
+      {/* Right Sidebar */}
+      <aside className="right">
+        <input type="text" placeholder="Search" />
+
+        <div className="card">
+          <h3>Subscribe to Premium</h3>
+          <p>Subscribe to unlock new features.</p>
+          <button>Subscribe</button>
         </div>
-      </div>
 
-      {/* Tabs */}
-      <div className="tabs">
-        <button>Tweets</button>
-        <button>Replies</button>
-        <button>Media</button>
-        <button>Likes</button>
-      </div>
-
-      {/* Sample Tweets */}
-      <div className="tweet-card">
-        <h4>John Doe</h4>
-        <p>@johndoe · 2h</p>
-        <p>Excited to build my Twitter Clone using React! 🚀</p>
-      </div>
-
-      <div className="tweet-card">
-        <h4>John Doe</h4>
-        <p>@johndoe · 5h</p>
-        <p>Learning React Components and Hooks.</p>
-      </div>
+        <div className="card">
+          <h3>Who to follow</h3>
+          <p>@OpenAI</p>
+          <p>@Google</p>
+          <p>@Microsoft</p>
+        </div>
+      </aside>
     </div>
   );
 }

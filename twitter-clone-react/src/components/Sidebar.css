@@ -1,0 +1,91 @@
+/* ==========================
+   LEFT SIDEBAR
+========================== */
+
+.sidebar {
+  padding: 20px;
+  border-right: 1px solid #2f3336;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.logo {
+  font-size: 35px;
+  margin-bottom: 25px;
+  padding-left: 10px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 15px 18px;
+  border-radius: 35px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+  background: #1d1f23;
+}
+
+.sidebar nav a.active {
+  font-weight: bold;
+  background: #36383b;
+}
+
+.sidebar nav i {
+  width: 25px;
+  text-align: center;
+}
+
+.post-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 40px;
+  background: #1d9bf0;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.post-btn:hover {
+  background: #1786cf;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 1200px) {
+  .sidebar nav span {
+    display: none;
+  }
+
+  .sidebar nav a {
+    justify-content: center;
+  }
+
+  .post-btn {
+    font-size: 0;
+    height: 55px;
+  }
+
+  .post-btn::after {
+    content: "+";
+    font-size: 28px;
+  }
+}
