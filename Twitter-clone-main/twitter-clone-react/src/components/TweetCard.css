@@ -1,0 +1,140 @@
+.tweet-card{
+    display:flex;
+    gap:14px;
+    padding:16px 18px;
+    border-bottom:1px solid #2f3336;
+    background:#000;
+    transition:.2s;
+}
+
+.tweet-card:hover{
+    background:#080808;
+}
+
+.tweet-avatar{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.tweet-content{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+.tweet-header{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    flex-wrap:wrap;
+}
+
+.tweet-name{
+    color:#fff;
+    font-weight:700;
+    font-size:15px;
+}
+
+.verified{
+    color:#1d9bf0;
+    font-size:14px;
+}
+
+.tweet-username,
+.tweet-time{
+    color:#71767b;
+    font-size:15px;
+}
+
+.tweet-text{
+    margin:10px 0 16px;
+    color:#e7e9ea;
+    font-size:15px;
+    line-height:1.6;
+    word-break:break-word;
+}
+
+.tweet-actions{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:520px;
+}
+
+.action-btn{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    background:transparent;
+    border:none;
+    color:#71767b;
+    cursor:pointer;
+    padding:8px;
+    border-radius:999px;
+    transition:.25s;
+    font-size:15px;
+}
+
+.action-btn svg{
+    font-size:18px;
+}
+
+.action-btn:hover{
+    background:rgba(29,155,240,.12);
+    color:#1d9bf0;
+}
+
+.action-btn.liked{
+    color:#f91880;
+}
+
+.action-btn.liked:hover{
+    background:rgba(249,24,128,.12);
+}
+
+.action-btn.saved{
+    color:#1d9bf0;
+}
+
+.action-btn.saved:hover{
+    background:rgba(29,155,240,.12);
+}
+
+@media(max-width:768px){
+
+.tweet-card{
+    padding:12px;
+}
+
+.tweet-avatar{
+    width:42px;
+    height:42px;
+}
+
+.tweet-name,
+.tweet-username,
+.tweet-time{
+    font-size:14px;
+}
+
+.tweet-text{
+    font-size:14px;
+}
+
+.tweet-actions{
+    max-width:100%;
+}
+
+.action-btn{
+    font-size:13px;
+    padding:6px;
+}
+
+.action-btn svg{
+    font-size:16px;
+}
+
+}

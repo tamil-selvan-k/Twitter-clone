@@ -1,0 +1,172 @@
+.right-sidebar{
+    width:360px;
+    padding:16px;
+    position:sticky;
+    top:0;
+    height:100vh;
+    overflow-y:auto;
+    background:#000;
+}
+
+.right-sidebar::-webkit-scrollbar{
+    display:none;
+}
+
+/* Search */
+
+.search-box{
+    display:flex;
+    align-items:center;
+    background:#202327;
+    border-radius:999px;
+    padding:12px 16px;
+    margin-bottom:18px;
+}
+
+.search-box svg{
+    color:#71767b;
+    margin-right:12px;
+}
+
+.search-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:transparent;
+    color:#fff;
+    font-size:15px;
+}
+
+.search-box input::placeholder{
+    color:#71767b;
+}
+
+/* Widgets */
+
+.widget{
+    background:#16181c;
+    border-radius:18px;
+    padding:18px;
+    margin-bottom:18px;
+}
+
+.widget h2{
+    color:#fff;
+    font-size:20px;
+    margin-bottom:18px;
+}
+
+.widget p{
+    color:#e7e9ea;
+    font-size:15px;
+    line-height:1.5;
+    margin-bottom:16px;
+}
+
+.widget button{
+    background:#1d9bf0;
+    color:#fff;
+    border:none;
+    border-radius:999px;
+    padding:10px 18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.widget button:hover{
+    background:#1a8cd8;
+}
+
+/* Trends */
+
+.trend{
+    padding:12px 0;
+    border-bottom:1px solid #2f3336;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.trend:last-child{
+    border-bottom:none;
+}
+
+.trend:hover{
+    background:rgba(255,255,255,.03);
+}
+
+.trend small{
+    display:block;
+    color:#71767b;
+    font-size:13px;
+}
+
+.trend h4{
+    color:#fff;
+    font-size:16px;
+    margin:4px 0;
+}
+
+/* Follow Users */
+
+.follow-user{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 0;
+}
+
+.follow-user img{
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.user-info{
+    flex:1;
+    margin-left:12px;
+}
+
+.user-name{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    color:#fff;
+    font-weight:700;
+}
+
+.user-info span{
+    color:#71767b;
+    font-size:14px;
+}
+
+.verified{
+    color:#1d9bf0;
+    font-size:14px;
+}
+
+.follow-user button{
+    background:#fff;
+    color:#000;
+    border:none;
+    border-radius:999px;
+    padding:8px 18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.follow-user button:hover{
+    background:#e6e6e6;
+}
+
+/* Responsive */
+
+@media(max-width:1200px){
+
+.right-sidebar{
+    display:none;
+}
+
+}

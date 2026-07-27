@@ -1,23 +1,46 @@
+import { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import "./Home.css";
 import profileImg from "../assets/profile.jpeg";
 
-const tweets = [
-  {
-    id: 1,
-    name: "Elon Musk",
-    handle: "@elonmusk · 2m",
-    text: "Welcome to the HTML & CSS Twitter clone.",
-  },
-  {
-    id: 2,
-    name: "OpenAI",
-    handle: "@OpenAI · 1h",
-    text: "Building beautiful interfaces without JavaScript.",
-  },
-];
-
 function Home() {
+  const [tweets, setTweets] = useState([]);
+  const [content, setContent] = useState("");
+
+  // Load posts
+  const fetchPosts = () => {
+    fetch("http://localhost:8080/api/posts")
+      .then((response) => response.json())
+      .then((data) => setTweets(data))
+      .catch((error) => console.error("Error fetching posts:", error));
+  };
+
+  useEffect(() => {
+    fetchPosts();
+  }, []);
+
+  // Create new post
+  const handleTweet = () => {
+    if (content.trim() === "") return;
+
+    fetch("http://localhost:8080/api/posts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: "Ramya",
+        content: content,
+      }),
+    })
+      .then((response) => response.json())
+      .then(() => {
+        setContent("");
+        fetchPosts();
+      })
+      .catch((error) => console.error("Error:", error));
+  };
+
   return (
     <div className="container">
       {/* Left Sidebar */}
@@ -31,17 +54,28 @@ function Home() {
 
         <div className="compose">
           <img src={profileImg} alt="Your profile" />
-          <input type="text" placeholder="What's happening?" />
+
+          <input
+            type="text"
+            placeholder="What's happening?"
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+          />
+
+          <button onClick={handleTweet}>Tweet</button>
         </div>
 
         {tweets.map((tweet) => (
           <div className="tweet" key={tweet.id}>
-            <img src={profileImg} alt={tweet.name} />
+            <img src={profileImg} alt={tweet.username} />
+
             <div>
               <h3>
-                {tweet.name} <span>{tweet.handle}</span>
+                {tweet.username} <span>@{tweet.username}</span>
               </h3>
-              <p>{tweet.text}</p>
+
+              <p>{tweet.content}</p>
+
               <div className="tweet-icons">
                 <i className="fa-regular fa-comment"></i>
                 <i className="fa-solid fa-retweet"></i>
